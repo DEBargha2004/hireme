@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
 
 export default {
   darkMode: ["class"],
@@ -58,5 +59,26 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    plugin(function ({ addComponents }) {
+      addComponents({
+        ".shadow-spread-none": {
+          "box-shadow": "none",
+        },
+        ".shadow-spread-sm": {
+          "box-shadow": "0 0 10px rgba(0, 0, 0, 0.2)",
+        },
+        ".shadow-spread": {
+          "box-shadow": "0 0 15px rgba(0, 0, 0, 0.2)",
+        },
+        ".shadow-spread-lg": {
+          "box-shadow": "0 0 20px rgba(0, 0, 0, 0.2)",
+        },
+        ".shadow-spread-xl": {
+          "box-shadow": "0 0 25px rgba(0, 0, 0, 0.2)",
+        },
+      });
+    }),
+  ],
 } satisfies Config;

@@ -1,0 +1,7 @@
+.section {
+  @apply xl:w-[1156px] lg:w-[960px] md:w-[720px] w-full px-3 mx-auto text-center;
+}
+
+.section-container {
+  @apply w-full;
+}

@@ -22,7 +22,7 @@ export default function Navbar() {
   const { isNavbarCompressed, toggleIsNavbarCompressed } = useGlobalAppStore();
   return (
     <>
-      <nav className="sticky top-0 py-5 px-10 shadow">
+      <nav className="sticky top-0 py-5 px-10 shadow bg-background">
         <div className="w-full h-10 flex items-center justify-between">
           <AppLogo />
           <div className="w-full flex justify-end">
@@ -73,7 +73,7 @@ export default function Navbar() {
       </nav>
       <div
         className={cn(
-          "fixed left-0 top-20 w-full transition-all lg:hidden flex flex-col justify-center items-center gap-3 bg-muted overflow-hidden",
+          "fixed left-0 top-20 z-[999] w-full transition-all lg:hidden flex flex-col justify-center items-center gap-3 bg-muted overflow-hidden",
           isNavbarCompressed ? "h-0" : "h-[400px]",
         )}
       >

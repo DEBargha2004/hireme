@@ -12,7 +12,7 @@ type Actions = {
 };
 
 export const useGlobalAppStore = create<State & Actions>((set) => ({
-  isNavbarCompressed: false,
+  isNavbarCompressed: true,
   setIsNavbarCompressed: (isNavbarCompressed) =>
     set(
       produce((state: State) => {
