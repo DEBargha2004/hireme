@@ -1,5 +1,5 @@
 .section {
-  @apply xl:w-[1156px] lg:w-[960px] md:w-[720px] w-full px-3 mx-auto text-center;
+  @apply xl:w-[1156px] lg:w-[960px] md:w-[740px] sm:w-[540px] w-full px-3 mx-auto text-center;
 }
 
 .section-container {

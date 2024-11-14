@@ -1,10 +1,16 @@
 import Navbar from "@/components/custom/navbar";
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function Layout({
+  children,
+  dialog,
+}: {
+  children: React.ReactNode;
+  dialog: React.ReactNode;
+}) {
   return (
     <main>
       <Navbar />
-
+      {dialog}
       {children}
     </main>
   );
