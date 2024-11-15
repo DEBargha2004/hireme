@@ -57,16 +57,24 @@ export default function TrendingJobs() {
 
 function TrendingJobCard({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex flex-col justify-between items-start gap-2 p-12 border rounded-2xl space-y-3 shadow-lg transition-all hover:scale-105 hover:shadow-xl shrink-0">
+    <div className="flex flex-col justify-between items-start gap-2 md:p-12 p-4 border rounded-2xl space-y-3 shadow-lg transition-all hover:scale-105 hover:shadow-xl shrink-0">
       {children}
     </div>
   );
 }
 
 function TrendingJobTitle({ children }: { children: React.ReactNode }) {
-  return <h2 className="text-lg font-medium whitespace-nowrap">{children}</h2>;
+  return (
+    <h2 className="md:text-lg text-base font-medium whitespace-nowrap">
+      {children}
+    </h2>
+  );
 }
 
 function TrendingJobDescription({ children }: { children: React.ReactNode }) {
-  return <p className="text-muted-foreground whitespace-nowrap">{children}</p>;
+  return (
+    <p className="text-muted-foreground whitespace-nowrap md:text-base text-sm">
+      {children}
+    </p>
+  );
 }

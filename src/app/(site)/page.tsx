@@ -4,6 +4,8 @@ import Landing from "@/components/custom/home/landing";
 import TrendingJobs from "@/components/custom/home/trending-jobs";
 import ChatWithDecisionmakers from "@/components/custom/home/chat-with-decisionmakers";
 import Cities from "@/components/custom/home/cities";
+import Recruiters from "@/components/custom/home/recruiters";
+import Testimonials from "@/components/custom/home/testimonials";
 
 export default function Page() {
   return (
@@ -13,6 +15,8 @@ export default function Page() {
       <TrendingJobs />
       <ChatWithDecisionmakers />
       <Cities />
+      <Recruiters />
+      <Testimonials />
     </div>
   );
 }
