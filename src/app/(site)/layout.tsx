@@ -1,3 +1,4 @@
+import Footer from "@/components/custom/home/footer";
 import Navbar from "@/components/custom/navbar";
 
 export default function Layout({
@@ -12,6 +13,7 @@ export default function Layout({
       <Navbar />
       {dialog}
       {children}
+      <Footer />
     </main>
   );
 }

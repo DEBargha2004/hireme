@@ -23,11 +23,11 @@ export default function Testimonials() {
   useEffect(() => {
     if (!api) return;
 
-    setCount(api.scrollSnapList().length - 1);
-    setCurrent(api.selectedScrollSnap());
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap() + 1);
 
     api.on("select", () => {
-      setCurrent(api.selectedScrollSnap());
+      setCurrent(api.selectedScrollSnap() + 1);
     });
   }, [api]);
   return (
@@ -41,7 +41,7 @@ export default function Testimonials() {
             }}
             plugins={[
               Autoplay({
-                delay: 2000,
+                delay: 4000,
                 stopOnMouseEnter: true,
                 playOnInit: true,
               }),
@@ -87,12 +87,12 @@ export default function Testimonials() {
             <CarouselNext className="sm:flex hidden" />
             <CarouselPrevious className="sm:flex hidden" />
             <div className="flex justify-center items-center gap-3 mt-5">
-              {Array.from({ length: 4 }).map((_, i) => (
+              {Array.from({ length: count }).map((_, i) => (
                 <div
                   key={i}
                   className={cn(
                     "w-2.5 h-2.5 rounded-full border border-black",
-                    current === i && "bg-primary/70",
+                    current === i + 1 && "bg-primary/70",
                   )}
                 ></div>
               ))}

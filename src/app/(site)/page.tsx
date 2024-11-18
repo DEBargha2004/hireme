@@ -6,6 +6,7 @@ import ChatWithDecisionmakers from "@/components/custom/home/chat-with-decisionm
 import Cities from "@/components/custom/home/cities";
 import Recruiters from "@/components/custom/home/recruiters";
 import Testimonials from "@/components/custom/home/testimonials";
+import MediaCoverage from "@/components/custom/home/media-coverage";
 
 export default function Page() {
   return (
@@ -17,6 +18,7 @@ export default function Page() {
       <Cities />
       <Recruiters />
       <Testimonials />
+      <MediaCoverage />
     </div>
   );
 }
