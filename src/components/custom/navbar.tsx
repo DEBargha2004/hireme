@@ -50,7 +50,7 @@ export default function Navbar() {
                     <AlignJustify className="h-5 w-5 scale-125" />
                   </Button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent align="end">
+                <DropdownMenuContent align="end" className="z-[999]">
                   {navLinks.slice(3).map((link) => (
                     <Link href={link.href} key={link.label}>
                       <DropdownMenuItem className="p-4">

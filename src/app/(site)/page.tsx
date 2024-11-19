@@ -1,5 +1,4 @@
 import GetAppSection from "@/components/custom/home/get-app";
-import "./style.css";
 import Landing from "@/components/custom/home/landing";
 import TrendingJobs from "@/components/custom/home/trending-jobs";
 import ChatWithDecisionmakers from "@/components/custom/home/chat-with-decisionmakers";
