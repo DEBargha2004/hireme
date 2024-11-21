@@ -1,6 +1,8 @@
 import AboutHirect from "@/components/custom/about/about-hirect";
 import MeetTheTeam from "@/components/custom/about/meet-the-team";
 import MileStones from "@/components/custom/about/mile-stone";
+import OfficeLocation from "@/components/custom/about/office-loc";
+import MediaCoverage from "@/components/custom/about/media-coverage";
 
 export default function Page() {
   return (
@@ -8,6 +10,8 @@ export default function Page() {
       <AboutHirect />
       <MeetTheTeam />
       <MileStones />
+      <OfficeLocation />
+      <MediaCoverage />
     </div>
   );
 }

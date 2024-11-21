@@ -64,6 +64,7 @@ export default {
   },
   plugins: [
     require("tailwindcss-animate"),
+    require("@tailwindcss/container-queries"),
     plugin(function ({ addComponents }) {
       addComponents({
         ".shadow-spread-none": {
