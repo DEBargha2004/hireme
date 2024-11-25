@@ -12,9 +12,9 @@ const faqs: { question: string; answer: React.ReactNode }[] = [
     answer: (
       <p>
         The Hireme app has over 3 million job seekers spread across 1200+ job
-        categories. Hireme's AI algorithm selects the best-fit candidates for a
-        position, helping recruiters connect directly with candidates who have
-        relevant experience and the desired skills.
+        categories. Hireme&apos;s AI algorithm selects the best-fit candidates
+        for a position, helping recruiters connect directly with candidates who
+        have relevant experience and the desired skills.
       </p>
     ),
   },
