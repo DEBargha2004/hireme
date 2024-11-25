@@ -2,6 +2,10 @@
   @apply xl:w-[1156px] lg:w-[960px] md:w-[740px] sm:w-[540px] w-full px-3 mx-auto text-center;
 }
 
+.section-lg {
+  @apply 2xl:w-[1500px] xl:w-[1200px] lg:w-[1000px] md:w-[740px] sm:w-[540px] w-full px-3 mx-auto text-center;
+}
+
 .section-container {
   @apply w-full;
 }

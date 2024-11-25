@@ -1,4 +1,4 @@
-import AboutHirect from "@/components/custom/about/about-hirect";
+import AboutHirect from "@/components/custom/about/about-hireme";
 import MeetTheTeam from "@/components/custom/about/meet-the-team";
 import MileStones from "@/components/custom/about/mile-stone";
 import OfficeLocation from "@/components/custom/about/office-loc";

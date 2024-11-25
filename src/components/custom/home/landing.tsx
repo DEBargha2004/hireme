@@ -69,7 +69,7 @@ export default function Landing() {
         Team Leaders and Hiring Managers
       </h1>
       <p className="text-lg text-muted-foreground ">
-        Hirect simplifies the hiring process. Directly chatting with verified
+        Hireme simplifies the hiring process. Directly chatting with verified
         candidates matched by the AI algorithm ensures a simple, quick and
         effective hiring experience.
       </p>

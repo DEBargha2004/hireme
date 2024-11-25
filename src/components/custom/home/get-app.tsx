@@ -27,7 +27,7 @@ export default function GetAppSection() {
       <section className="section grid sm:grid-cols-2 pt-10">
         <div className="w-full flex flex-col justify-center gap-10 sm:text-left text-center">
           <h1 className="md:text-6xl text-5xl font-bold">
-            Get the <span className="text-primary">Hirect</span> App
+            Get the <span className="text-primary">Hireme</span> App
           </h1>
           <p className="text-black/90 ">
             We will send you a link via SMS. To download the app, simply open

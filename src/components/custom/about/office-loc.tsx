@@ -13,7 +13,7 @@ const infos = [
   },
   {
     logo: Mail,
-    label: "support@hirect.in",
+    label: "support@hireme.in",
   },
 ];
 

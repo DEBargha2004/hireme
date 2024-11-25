@@ -33,7 +33,7 @@ export default function Recruiters() {
       <div className="section space-y-16">
         <h1 className="text-4xl font-bold">
           More than <span className="text-primary">190K</span> Recruiters trust{" "}
-          <span className="text-primary">Hirect</span>
+          <span className="text-primary">Hireme</span>
         </h1>
         <div className="grid md:grid-cols-6 grid-cols-2 gap-4">
           {images.map((i, idx) => (

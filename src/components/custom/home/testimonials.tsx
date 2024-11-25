@@ -33,7 +33,7 @@ export default function Testimonials() {
   return (
     <div className="w-full pt-10">
       <div className="section space-y-10">
-        <h1 className="text-4xl font-bold">Influencer&apos;s Take on Hirect</h1>
+        <h1 className="text-4xl font-bold">Influencer&apos;s Take on Hireme</h1>
         <div className="lg:w-4/5 md:w-[90%] mx-auto">
           <Carousel
             opts={{
@@ -72,7 +72,7 @@ export default function Testimonials() {
                         actually small? What if you are just starting out? What
                         if you are an HR Recruiter looking for some finite
                         specific skills? It becomes hard, and that&apos;s why
-                        Hirect. Hirect allows you to chat directly with 3
+                        Hireme. Hireme allows you to chat directly with 3
                         Million candidates. There is 100% privacy. It&apos;s
                         like WhatsApp chatting with people that you would want
                         to recruit. And that&apos;s why it&apos;s become such a

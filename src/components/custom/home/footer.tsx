@@ -3,7 +3,7 @@ import AppLogo from "../app-logo";
 
 const footerLabel = [
   {
-    title: "Hirect",
+    title: "Hireme",
     data: [
       "Home",
       "About Us",
@@ -19,7 +19,7 @@ const footerLabel = [
   },
   {
     title: "Support",
-    data: ["Support@hirect.in", "For Recruiters Schedule a Call"],
+    data: ["Support@hireme.in", "For Recruiters Schedule a Call"],
   },
   {
     title: "Legal",

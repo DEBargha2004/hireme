@@ -5,7 +5,7 @@ export default function AboutHirect() {
     <div className="w-full space-y-10 py-14">
       <div className="section space-y-10">
         <h1 className="sm:text-6xl text-5xl font-bold">
-          About <span className="text-primary">Hirect</span>
+          About <span className="text-primary">Hire</span>
         </h1>
         <div
           className={cn(
@@ -21,17 +21,17 @@ export default function AboutHirect() {
           <div className=""></div>
         </div>
         <article className="text-center space-y-3 [&>*]:text-black/70 [&>*]:text-base">
-          <p>Hirect was founded in 2018 as a direct hiring application.</p>
+          <p>Hireme was founded in 2018 as a direct hiring application.</p>
           <p>
             Our vision of virtually connecting the skill-oriented workforce with
             high-growth startups and SMEs has manifested into our service
-            provisions. Hirect&apos;s AI algorithm helps connect recruiters
+            provisions. Hireme&apos;s AI algorithm helps connect recruiters
             directly with relevant candidates equipped with desired skills and
             experience.
           </p>
           <p>
             Our philosophy has always been to simplify the hiring process.
-            Hirect offers direct chat and video call features which have enabled
+            Hireme offers direct chat and video call features which have enabled
             over 3M job seekers to connect directly with over 190K recruiters on
             our platform.
           </p>

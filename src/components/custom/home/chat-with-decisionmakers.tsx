@@ -1,5 +1,5 @@
-import hireDirectHirect from "@/../public/hire-direct-hirect-new.png";
-import hireChat from "@/../public/hirect-chart.png";
+import hireDirectHirect from "@/../public/hire-direct-hireme-new.png";
+import hireChat from "@/../public/hireme-chart.png";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
@@ -13,7 +13,7 @@ export default function ChatWithDecisionmakers() {
               Chat directly with Decision-Makers
             </h1>
             <p className="text-muted-foreground">
-              Hirect encourages direct and quick responses between job-seekers
+              Hireme encourages direct and quick responses between job-seekers
               and recruiters. Through the bi-directional direct chat feature,
               candidates can chat directly with relevant and verified recruiters
               on this job search app.
@@ -24,7 +24,7 @@ export default function ChatWithDecisionmakers() {
           </section>
           <section>
             <Image
-              alt="Hire Direct Hirect"
+              alt="Hire Direct Hireme"
               src={hireDirectHirect}
               height={400}
               width={400}
@@ -37,15 +37,15 @@ export default function ChatWithDecisionmakers() {
         <div className="section grid md:grid-cols-2  gap-10">
           <section className="pr-10">
             <Image
-              alt="Hire Direct Hirect"
+              alt="Hire Direct Hireme"
               src={hireChat}
               className="h-full md:w-auto w-full"
             />
           </section>
           <section className="flex flex-col md:col-start-2 row-start-1 justify-center md:items-start items-center md:text-left gap-6">
-            <h1 className="text-4xl font-bold">Hire Directly with Hirect</h1>
+            <h1 className="text-4xl font-bold">Hire Directly with Hireme</h1>
             <p>
-              3.8M+ candidates chat directly with 190K+ recruiters on Hirect.
+              3.8M+ candidates chat directly with 190K+ recruiters on Hireme.
             </p>
             <Button
               className="rounded-full text-black font-semibold px-7 py-5"
