@@ -1,4 +1,5 @@
 import About from "@/components/custom/recruiter/about";
+import Faq from "@/components/custom/recruiter/faq";
 import Features from "@/components/custom/recruiter/features";
 import HireInstantly from "@/components/custom/recruiter/hire-instantly";
 import HiringProcess from "@/components/custom/recruiter/hiring-process";
@@ -9,9 +10,10 @@ export default function Page() {
     <div className="space-y-28">
       <HireInstantly />
       <About />
-      <HiringProcess />
       <HiringSteps />
+      <HiringProcess />
       <Features />
+      <Faq />
     </div>
   );
 }

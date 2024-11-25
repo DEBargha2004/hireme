@@ -26,7 +26,7 @@ const features = [
 
 export default function Features() {
   return (
-    <div className="w-full md:block hidden pb-20">
+    <div className="w-full md:block hidden pb-0">
       <div className="section space-y-20">
         <h1 className="lg:text-4xl text-3xl font-bold">Key Features</h1>
         <div className="grid grid-cols-4 xl:gap-10 gap-6">

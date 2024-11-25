@@ -25,8 +25,8 @@ export default function HireInstantly() {
   const onSubmit = (data: TRecruiterSchema) => {};
   return (
     <div className="w-full py-10">
-      <div className="section grid md:grid-cols-2 gap-10">
-        <section className="flex flex-col justify-start md:items-start md:text-left text-center items-center gap-6">
+      <div className="section flex md:flex-row flex-col-reverse justify-between items-start gap-10">
+        <section className="flex flex-col justify-start md:items-start md:text-left text-center items-center gap-6 w-full">
           <h1 className="md:text-6xl text-5xl font-bold">
             Want to <span className="text-primary">Hire</span> Instantly?
           </h1>
@@ -43,7 +43,7 @@ export default function HireInstantly() {
             className="w-4/5 "
           />
         </section>
-        <section className="flex flex-col justify-between items-end">
+        <section className="flex flex-col justify-between items-end w-full">
           <Card className=" shadow-2xl lg:w-[85%] w-full h-fit">
             <CardHeader>
               <CardTitle className="text-2xl text-black/80 tracking-wide">
