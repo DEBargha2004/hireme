@@ -1,3 +1,5 @@
+"use client";
+
 import { forwardRef, HTMLProps, useState } from "react";
 import {
   type CountryCallingCode,
@@ -31,10 +33,11 @@ i18nIsoCountries.registerLocale(enCountries);
 const InputPhone = forwardRef<
   HTMLInputElement,
   {
-    value: string | undefined;
-    onChange: (value: string | undefined) => void;
+    value?: string | undefined;
+    onChange?: (value: string | undefined) => void;
+    className?: string;
   }
->(({ value, onChange }, ref) => {
+>(({ value = "", onChange, className }, ref) => {
   const options = getCountriesOptions();
 
   // You can use a the country of the phone number to set the default country
@@ -52,12 +55,14 @@ const InputPhone = forwardRef<
   );
 
   const onCountryChange = (value: CountryOption) => {
-    onChange(undefined);
+    onChange?.(undefined);
     setCountry(value);
   };
 
+  const handleOnChange = onChange ?? (() => null);
+
   return (
-    <div className="not-prose flex flex-col gap-4">
+    <div className={cn("not-prose flex flex-col gap-4", className)}>
       <div className="flex">
         <ComboboxCountryInput
           value={country}
@@ -85,7 +90,7 @@ const InputPhone = forwardRef<
             inputComponent={Input}
             placeholder={placeholder}
             value={value}
-            onChange={onChange}
+            onChange={handleOnChange}
             ref={ref}
           />
         </div>

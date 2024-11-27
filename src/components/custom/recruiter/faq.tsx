@@ -1,10 +1,12 @@
-"use client";
-
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { Minus, Plus } from "lucide-react";
 import Link from "next/link";
-import React, { useState } from "react";
+import React from "react";
 
 const faqs: { question: string; answer: React.ReactNode }[] = [
   {
@@ -94,39 +96,32 @@ const faqs: { question: string; answer: React.ReactNode }[] = [
 ];
 
 export default function Faq() {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
   return (
     <div className="w-full pb-16">
       <div className="section space-y-20">
         <h1 className="md:text-4xl text-3xl font-bold">FAQ</h1>
-        <div className="space-y-3">
+        <Accordion type="multiple" className="space-y-3">
           {faqs.map((faq, idx) => (
-            <div
-              key={idx}
-              className="md:w-4/5 w-[calc(100%-20px)] mx-auto space-y-1"
-            >
-              <div
-                className="p-5 bg-primary/10 rounded-lg flex justify-between items-start gap-4 cursor-pointer"
-                onClick={() => setActiveIndex(activeIndex === idx ? null : idx)}
+            <AccordionItem key={idx} value={idx.toString()}>
+              <AccordionTrigger
+                triggerSymbol={
+                  <span className="[&>svg]:h-4 [&>svg]:w-4 [&>svg]:hidden">
+                    <Minus id="minus" /> <Plus id="plus" />
+                  </span>
+                }
+                className="w-full [&[data-state=open]>span>svg[id=minus]]:block [&[data-state=closed]>span>svg[id=plus]]:block"
               >
                 <p className="text-left w-full text-sm">
                   Q{idx + 1} {faq.question}
                 </p>
-                <span className="[&>svg]:h-4 [&>svg]:w-4">
-                  {activeIndex === idx ? <Minus /> : <Plus />}
-                </span>
-              </div>
-              <div
-                className={cn(
-                  "h-0 overflow-hidden text-left px-5 ease-out transition-all border border-transparent shadow-lg rounded-lg text-muted-foreground text-sm",
-                  idx === activeIndex && "h-auto py-5 border-border",
-                )}
-              >
-                {faq.answer}
-              </div>
-            </div>
+              </AccordionTrigger>
+              <AccordionContent>
+                <span className="p-5 inline-block">{faq.answer}</span>
+              </AccordionContent>
+            </AccordionItem>
           ))}
-        </div>
+        </Accordion>
+        <div></div>
       </div>
     </div>
   );
