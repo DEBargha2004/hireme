@@ -13,22 +13,7 @@ import { InputPhone } from "@/components/ui/input-phone";
 import { cn } from "@/lib/utils";
 import { TRecruiterSchema } from "@/schema/recruiter";
 import { useForm } from "react-hook-form";
-
-const StyledInput: React.FC<React.ComponentProps<"input">> = ({
-  className,
-  ...props
-}) => {
-  return (
-    <Input
-      className={cn(
-        "h-10 rounded-full px-4",
-        "focus-visible:bg-blue-50 focus-visible:ring-0",
-        className,
-      )}
-      {...props}
-    />
-  );
-};
+import { StyledFormInput } from "../styled-form-input";
 
 export default function RecruiterForm({
   form,
@@ -49,7 +34,7 @@ export default function RecruiterForm({
           render={({ field }) => (
             <FormItem>
               <FormControl>
-                <StyledInput placeholder="Name" {...field} />
+                <StyledFormInput placeholder="Name" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -72,7 +57,7 @@ export default function RecruiterForm({
           render={({ field }) => (
             <FormItem>
               <FormControl>
-                <StyledInput placeholder="Email" {...field} type="email" />
+                <StyledFormInput placeholder="Email" {...field} type="email" />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -84,7 +69,7 @@ export default function RecruiterForm({
           render={({ field }) => (
             <FormItem>
               <FormControl>
-                <StyledInput placeholder="Company Name" {...field} />
+                <StyledFormInput placeholder="Company Name" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -96,7 +81,7 @@ export default function RecruiterForm({
           render={({ field }) => (
             <FormItem>
               <FormControl>
-                <StyledInput placeholder="Designation" {...field} />
+                <StyledFormInput placeholder="Designation" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
