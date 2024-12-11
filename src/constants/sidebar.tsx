@@ -39,6 +39,9 @@ export const sidebarItems: SidebarItem[] = [
     label: "Manage Jobs",
     Icon: BriefcaseBusiness,
     href: "/dashboard/jobs",
-    selected: (path: string) => path === "/dashboard/jobs",
+    pattern: "/dashboard/jobs/**",
+    selected(path: string) {
+      return micromatch.isMatch(path, this.pattern!);
+    },
   },
 ];
