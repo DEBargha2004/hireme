@@ -4,7 +4,7 @@ import { dashboardTabs } from "@/constants/tabs";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import DashboardJobFilter from "../_components/filter";
+import DashboardJobFilter from "./_components/filter";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();

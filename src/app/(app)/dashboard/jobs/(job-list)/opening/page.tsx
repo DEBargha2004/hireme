@@ -1,4 +1,4 @@
-import JobListingCard from "../_components/job-listing-card";
+import JobListingCard from "../../_components/job-listing-card";
 
 export default function Page() {
   return (

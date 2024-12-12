@@ -1,5 +1,6 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { cn } from "@/lib/utils";
+import NavbarHeader from "./navbar-header";
 
 export default function Navbar({
   className,
@@ -13,7 +14,7 @@ export default function Navbar({
       )}
       {...props}
     >
-      <h1 className="w-full font-semibold text-lg">For You</h1>
+      <NavbarHeader />
       <p className="text-sm text-muted-foreground">Ajit</p>
       <Avatar>
         <AvatarImage />
