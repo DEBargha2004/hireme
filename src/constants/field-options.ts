@@ -1,3 +1,5 @@
+import { filterSections } from "./filter";
+
 export type FieldOption = { label: string; value: string };
 
 export const designations: FieldOption[] = [
@@ -21,3 +23,28 @@ export const numberOfCandidates: FieldOption[] = [
   { label: "51-100", value: "51-100" },
   { label: "100+", value: "100+" },
 ];
+
+export const jobTypes: FieldOption[] = [
+  {
+    label: "Part Time",
+    value: 'part-time'
+  },
+  {
+    label: "Full Time",
+    value: "full-time"
+  },
+  {
+    label: "Contract",
+    value: "contract"
+  },
+  {
+    label: "Internship",
+    value: "internship"
+  }, {
+    label: "Freelance",
+    value: 'freelance'
+  }
+]
+
+export const experienceList = filterSections.find(f => f.key === 'exp')!.options
+export const educationList = filterSections.find(f => f.key === "edu")!.options
