@@ -32,7 +32,7 @@ export default function StartupHiringForm({
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="space-y-6 text-left [&>div>.error-message]:ml-3 shadow-xl"
+        className="space-y-6 text-left [&>div>.error-message]:ml-3 "
       >
         <FormField
           control={form.control}

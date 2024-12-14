@@ -64,7 +64,7 @@ export default function Hero() {
             </div>
           </div>
           <div className="flex md:justify-end justify-center h-fit">
-            <Card className="w-full max-w-[450px]">
+            <Card className="w-full max-w-[450px] shadow-xl">
               <CardHeader>
                 <CardTitle className="text-lg">
                   Let us Simplify the Hiring Process
