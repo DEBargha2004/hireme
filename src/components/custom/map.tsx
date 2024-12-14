@@ -1,6 +1,12 @@
 "use client";
 
-export default function Map({ query }: { query?: string }) {
+export default function Map({
+  query,
+  aspectRatio,
+}: {
+  query?: string;
+  aspectRatio?: string;
+}) {
   const searchParams = new URLSearchParams({
     q: query || "pune",
     key: "AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8",
@@ -11,7 +17,7 @@ export default function Map({ query }: { query?: string }) {
         overflow: "hidden",
         maxHeight: "100%",
         width: "100%",
-        aspectRatio: "16/12",
+        aspectRatio: aspectRatio ?? "16/12",
       }}
     >
       <div
