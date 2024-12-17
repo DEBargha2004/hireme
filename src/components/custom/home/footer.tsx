@@ -1,29 +1,86 @@
 import { Separator } from "@/components/ui/separator";
 import AppLogo from "../app-logo";
+import Link from "next/link";
 
-const footerLabel = [
+type FooterLabel = {
+  title: string;
+  data: { title: string; href?: string }[];
+};
+
+const footerLabel: FooterLabel[] = [
   {
     title: "Hireme",
     data: [
-      "Home",
-      "About Us",
-      "Recruiters",
-      "Job Seekers",
-      "Enterprise Hiring",
-      "Media",
-      "Influencers",
-      "Blog",
-      "For Startup Hiring",
-      "Contact us",
+      {
+        title: "Home",
+        href: "/",
+      },
+      {
+        title: "About Us",
+        href: "/aboutus",
+      },
+      {
+        title: "Recruiters",
+        href: "/recruiter",
+      },
+      {
+        title: "Job Seekers",
+        href: "/job-seeker",
+      },
+      {
+        title: "Enterprise Hiring",
+        href: "/enterprise-hiring",
+      },
+      {
+        title: "Media",
+        href: "/media-coverage",
+      },
+      {
+        title: "Influencers",
+        href: "/influencers",
+      },
+      {
+        title: "Blog",
+        href: "/blog",
+      },
+      {
+        title: "For Startup Hiring",
+        href: "/startup-hiring",
+      },
+      {
+        title: "Contact us",
+        href: "/contact-us",
+      },
     ],
   },
   {
     title: "Support",
-    data: ["Support@hireme.in", "For Recruiters Schedule a Call"],
+    data: [
+      {
+        title: "Support@hireme.in",
+        href: "mailto:support@hireme.in",
+      },
+      {
+        title: "For Recruiters Schedule a Call",
+      },
+    ],
   },
   {
     title: "Legal",
-    data: ["Privacy Policy", "Terms & Conditions", "Refund Policy"],
+    data: [
+      {
+        title: "Privacy Policy",
+        href: "/privacypolicy",
+      },
+      {
+        title: "Terms & Conditions",
+        href: "/termsconditions",
+      },
+      {
+        title: "Refund Policy",
+        href: "/refund-cancellation-policy",
+      },
+    ],
   },
 ];
 
@@ -49,12 +106,14 @@ export default function Footer() {
               </h1>
               <div>
                 {item.data.map((item, index) => (
-                  <p
-                    key={index}
-                    className="text-white py-1.5 lg:text-base text-xs"
-                  >
-                    {item}
-                  </p>
+                  <Link key={index} href={item.href ?? ""}>
+                    <p
+                      key={index}
+                      className="text-white py-1.5 lg:text-base text-xs"
+                    >
+                      {item.title}
+                    </p>
+                  </Link>
                 ))}
               </div>
             </section>
