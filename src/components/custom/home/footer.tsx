@@ -86,7 +86,7 @@ const footerLabel: FooterLabel[] = [
 
 export default function Footer() {
   return (
-    <section className="w-full bg-[#0E101A] space-y-10 ">
+    <section className="w-full bg-[#0E101A] space-y-10">
       <div className="w-[80%] mx-auto py-10 ">
         <div className="grid md:grid-cols-5 px-4 md:gap-4 gap-6">
           <section className="flex flex-col justify-start md:items-start md:text-left text-center items-center gap-10 md:col-span-2">

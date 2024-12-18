@@ -71,6 +71,10 @@ body {
   }
 }
 
-input[type=number]::-webkit-inner-spin-button{
+input[type="number"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+.scroller-hide::-webkit-scrollbar {
   display: none;
 }
