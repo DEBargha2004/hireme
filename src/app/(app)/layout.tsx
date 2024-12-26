@@ -1,14 +1,17 @@
 import Navbar from "@/components/custom/app/navbar";
-import Sidebar from "@/components/custom/app/sidebar";
+import Sidebar from "@/components/custom/app/sidebar/sidebar";
+import SidebarProvider from "@/providers/sidebar-provider";
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex h-fit">
-      <Sidebar className="hidden md:block w-[250px] shrink-0 sticky top-0 h-[100dvh]" />
-      <div className="w-full">
-        <Navbar className="sticky top-0 bg-card z-[9999]" />
-        <div className="p-6 pb-0">{children}</div>
+    <SidebarProvider>
+      <div className="flex items-start h-fit">
+        <Sidebar className="hidden md:flex shrink-0 sticky top-0 h-[100dvh] shadow-lg" />
+        <div className="w-full ">
+          <Navbar className="sticky top-0 bg-card z-[10]" />
+          <div className="md:p-4 p-3 pb-0">{children}</div>
+        </div>
       </div>
-    </div>
+    </SidebarProvider>
   );
 }

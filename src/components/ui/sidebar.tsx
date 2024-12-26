@@ -27,9 +27,9 @@ export const SidebarItem: React.FC<
     <SidebarItemContext.Provider value={{ selected }}>
       <div
         className={cn(
-          "flex justify-start items-center gap-4 w-full border-r-[3px] rounded-[2px]",
+          "flex justify-start items-center gap-4 w-full rounded-[2px]",
           "transition-all",
-          "data-[selected=true]:text-primary data-[selected=true]:border-primary data-[selected=false]:border-transparent",
+          "data-[selected=true]:text-primary hover:bg-primary/10 data-[selected=true]:bg-primary/20",
           className,
         )}
         {...props}
@@ -44,7 +44,9 @@ export const SidebarItemIcon: React.FC<{ Icon: Icon; className?: string }> = ({
 }) => {
   const { selected } = useSidebarItem();
   return (
-    <Icon className={cn("h-5 w-5", selected && "text-primary", className)} />
+    <Icon
+      className={cn("h-5 w-5 shrink-0", selected && "text-primary", className)}
+    />
   );
 };
 
@@ -54,6 +56,9 @@ export const SidebarItemLabel: React.FC<React.ComponentProps<"p">> = ({
 }) => {
   const { selected } = useSidebarItem();
   return (
-    <p className={cn("", selected && "text-primary", className)} {...props} />
+    <p
+      className={cn("text-sm", selected && "text-primary", className)}
+      {...props}
+    />
   );
 };

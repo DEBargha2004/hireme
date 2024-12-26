@@ -32,7 +32,10 @@ export const sidebarItems: SidebarItem[] = [
     label: "Messages",
     Icon: MessageSquareMore,
     href: "/dashboard/message",
-    selected: (path: string) => path === "/dashboard/message",
+    pattern: "/dashboard/message/**",
+    selected(path: string) {
+      return micromatch.isMatch(path, this.pattern!);
+    },
   },
   {
     id: "jobs",

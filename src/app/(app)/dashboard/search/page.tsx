@@ -26,10 +26,10 @@ export default function Page({
   const searchParamsObj = use(searchParams);
   const pathname = usePathname();
   return (
-    <main className="space-y-6">
+    <main className="space-y-6 @container">
       <div className="flex justify-between items-center gap-3">
         <Select>
-          <SelectTrigger className="w-[200px]">
+          <SelectTrigger className="md:w-[200px] w-[120px]">
             <SelectValue placeholder="Filter" />
           </SelectTrigger>
           <SelectContent>
@@ -40,15 +40,17 @@ export default function Page({
             ))}
           </SelectContent>
         </Select>
-        <Input />
-        <Button className="w-[120px]">
+        <div className="w-full flex justify-end">
+          <Input placeholder="Search..." className="md:w-[350px]" />
+        </div>
+        <Button className="md:w-[120px] w-12">
           <Search />
         </Button>
       </div>
       {filterSections.map((f) => (
         <div key={f.key} className="space-y-2">
           <h1 className="text-lg font-medium">{f.title}</h1>
-          <div className="grid grid-cols-8 gap-4">
+          <div className={cn("flex flex-wrap gap-4")}>
             {f.options.map((o) => (
               <Link
                 key={o.value}
@@ -56,7 +58,7 @@ export default function Page({
                   ...(searchParamsObj ?? {}),
                   [f.key]: o.value,
                 }).toString()}`}
-                className="block"
+                className="block min-w-32"
               >
                 <Button
                   className={cn(

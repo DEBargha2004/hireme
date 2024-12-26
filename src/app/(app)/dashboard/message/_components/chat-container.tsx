@@ -30,7 +30,7 @@ const messages = [
   "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas laborum ea vero architecto, cumque delectus quisquam veniam?",
 ];
 
-export default function ChatContainer() {
+export default function ChatContainer({}: { id: string }) {
   return (
     <div className="py-4 pb-0 px-8 space-y-4">
       <div
@@ -42,8 +42,8 @@ export default function ChatContainer() {
         <Button variant={"secondary"}>Chat</Button>
         <Button variant={"secondary"}>Online Profile</Button>
       </div>
-      <div className="flex justify-start gap-10">
-        <div className="w-2/5 space-y-3">
+      <div className="flex xl:flex-row flex-col justify-start gap-10">
+        <div className="xl:w-2/5 min-w-[400px] space-y-3">
           <h1 className="text-2xl font-medium">John Kumar Mishra</h1>
           <div className="flex justify-start items-center gap-10 text-muted-foreground">
             <section className="flex justify-start items-center gap-1">
@@ -91,7 +91,7 @@ export default function ChatContainer() {
               <AvatarImage />
               <AvatarFallback>JD</AvatarFallback>
             </Avatar>
-            <div className={cn("p-3 rounded-lg bg-muted max-w-[400px]")}>
+            <div className={cn("p-3 rounded-lg bg-muted max-w-[400px] w-3/5")}>
               {message}
             </div>
           </div>
@@ -101,7 +101,7 @@ export default function ChatContainer() {
         <div className="relative">
           <Textarea
             rows={3}
-            className="h-full border-none resize-none focus-visible:ring-0 focus:bg-accent"
+            className="h-full border  resize-none focus-visible:ring-0 focus:bg-accent"
           />
           <Button
             className="absolute bottom-2 right-2 h-8 px-3 text-xs rounded-full"

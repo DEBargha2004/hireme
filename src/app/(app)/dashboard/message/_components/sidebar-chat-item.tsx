@@ -1,8 +1,14 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { cn } from "@/lib/utils";
 
-export default function SidebarChatItem() {
+export default function SidebarChatItem({ active }: { active?: boolean }) {
   return (
-    <div className="flex justify-between items-start gap-2 p-4 transition-all hover:bg-muted cursor-pointer">
+    <div
+      className={cn(
+        "flex justify-between items-start gap-2 p-4 transition-all hover:bg-muted cursor-pointer",
+        active && "bg-muted",
+      )}
+    >
       <Avatar className="border">
         <AvatarImage />
         <AvatarFallback>JD</AvatarFallback>
