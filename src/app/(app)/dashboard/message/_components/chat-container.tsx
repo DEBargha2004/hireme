@@ -32,7 +32,7 @@ const messages = [
 
 export default function ChatContainer({}: { id: string }) {
   return (
-    <div className="py-4 pb-0 px-8 space-y-4">
+    <div className="py-4 pb-0 md:px-4 space-y-4">
       <div
         className={cn(
           "flex items-center gap-1 p-2 rounded-full bg-muted w-fit",
@@ -97,11 +97,11 @@ export default function ChatContainer({}: { id: string }) {
           </div>
         ))}
       </div>
-      <div className="w-full h-20  sticky bottom-0 bg-background">
-        <div className="relative">
+      <div className="w-full h-20 sticky bottom-0 bg-background">
+        <div className="relative h-full">
           <Textarea
             rows={3}
-            className="h-full border  resize-none focus-visible:ring-0 focus:bg-accent"
+            className="h-full border resize-none focus-visible:ring-0 focus:bg-accent"
           />
           <Button
             className="absolute bottom-2 right-2 h-8 px-3 text-xs rounded-full"

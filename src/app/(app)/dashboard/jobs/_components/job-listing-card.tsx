@@ -12,7 +12,7 @@ export default function JobListingCard() {
   return (
     <div className="@container p-8 border hover:bg-primary/5 transition-all flex justify-start items-start gap-5 w-full">
       <div className="w-full space-y-2">
-        <div className="flex justify-start items-center gap-4">
+        <div className="flex justify-start items-start gap-4">
           <h1>Flutter Mobile App Developer</h1>
           <Badge className="rounded-full">Opening</Badge>
         </div>

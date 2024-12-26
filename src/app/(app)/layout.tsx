@@ -1,4 +1,5 @@
 import Navbar from "@/components/custom/app/navbar";
+import NavigationHelper from "@/components/custom/app/navigation-helper";
 import Sidebar from "@/components/custom/app/sidebar/sidebar";
 import SidebarProvider from "@/providers/sidebar-provider";
 import { cookies } from "next/headers";
@@ -20,6 +21,7 @@ export default async function AppLayout({
           <div className="md:p-4 p-3 pb-0">{children}</div>
         </div>
       </div>
+      <NavigationHelper />
     </SidebarProvider>
   );
 }

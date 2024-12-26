@@ -42,13 +42,13 @@ export default function NavLinks() {
   const pathname = usePathname();
 
   return (
-    <div className="flex justify-start items-center">
+    <div className="flex justify-start items-center w-full overflow-x-auto">
       {links.map((link, index) => (
         <Link
           key={index}
           href={link.href}
           className={cn(
-            "inline-block p-2.5 px-5 border-b-[3px] border-transparent hover:bg-muted font-medium",
+            "inline-block whitespace-nowrap p-2.5 px-5 border-b-[3px] border-transparent hover:bg-muted font-medium",
             link.isSelected(pathname) && "text-primary border-primary",
           )}
         >

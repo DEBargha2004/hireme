@@ -5,17 +5,22 @@ import { cn } from "@/lib/utils";
 
 export default function JobCardLong() {
   return (
-    <div className="p-5 border flex justify-start items-center gap-5 w-full rounded hover:bg-accent transition-all">
+    <div
+      className={cn(
+        "p-5 border gap-5 w-full rounded hover:bg-accent transition-all",
+        "grid @4xl:grid-cols-[90px_1fr_1fr_150px] grid-cols-[70px_1fr]",
+      )}
+    >
       <div className="flex flex-col justify-between items-center gap-10 shrink-0">
         <Avatar>
           <AvatarImage />
           <AvatarFallback>JS</AvatarFallback>
         </Avatar>
-        <h1 className="text-primary text-base">Rs 3 - 5 LPA</h1>
+        <h1 className="text-primary text-sm whitespace-nowrap">Rs 3 - 5 LPA</h1>
       </div>
-      <div className="w-1/3 self-stretch flex flex-col justify-between items-start shrink-0">
+      <div className="w-full self-stretch flex flex-col justify-between items-start shrink-0">
         <h1 className="text-base font-semibold">John Doe</h1>
-        <p className="text-muted-foreground flex justify-start items-center text-sm">
+        <p className="text-muted-foreground flex justify-start items-center text-sm [&>span]:whitespace-nowrap">
           <span>20 years old</span>
           <Dot className="h-4 w-4" />
           <span>Fresher</span>
@@ -31,7 +36,7 @@ export default function JobCardLong() {
           autem consectetur dolorum temporibus ab inventore modi aperiam cu
         </p>
       </div>
-      <div className="w-1/3 self-stretch flex flex-col justify-center items-start shrink-0 gap-5">
+      <div className="w-full self-stretch @4xl:flex hidden flex-col justify-center items-start shrink-0 gap-5">
         {Array.from({ length: 2 }).map((_, i) => (
           <div key={i} className="relative">
             <div className="flex justify-start items-center gap-4 relative z-20">
@@ -58,8 +63,8 @@ export default function JobCardLong() {
           </div>
         ))}
       </div>
-      <div className="w-full self-stretch flex flex-col justify-center items-center">
-        <Button className="w-1/2 min-w-[130px] py-5">Start Chatting</Button>
+      <div className="w-full @4xl:col-start-4 col-start-2 self-stretch my-auto">
+        <Button className="w-full max-w-[200px] py-5">Start Chatting</Button>
       </div>
     </div>
   );

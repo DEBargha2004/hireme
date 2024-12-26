@@ -9,7 +9,7 @@ import DashboardJobFilter from "./_components/filter";
 export default function Layout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   return (
-    <main className="space-y-6">
+    <main className="space-y-6 @container">
       <div className="flex justify-between items-center gap-4">
         <div>
           {dashboardTabs.map((item, index) => (
