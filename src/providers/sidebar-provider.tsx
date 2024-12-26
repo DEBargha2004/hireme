@@ -1,6 +1,13 @@
 "use client";
 
-import React, { createContext, Dispatch, useContext, useState } from "react";
+import { useCookie } from "@/hooks/use-cookie";
+import React, {
+  createContext,
+  Dispatch,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 
 type State = {
   isSidebarExpanded: boolean;
@@ -18,14 +25,25 @@ const SidebarContext = createContext<(State & Actions) | null>(null);
 
 export default function SidebarProvider({
   children,
+  defaultValues,
 }: {
   children: React.ReactNode;
+  defaultValues?: Partial<State>;
 }) {
-  const [isSidebarExpanded, setIsSidebarExpanded] = useState(false);
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isSidebarExpanded, setIsSidebarExpanded] = useState(
+    defaultValues?.isSidebarExpanded ?? false,
+  );
+  const [isSidebarOpen, setIsSidebarOpen] = useState(
+    defaultValues?.isSidebarOpen ?? false,
+  );
+  const { setCookie } = useCookie();
 
   const toggleSidebarExpanded = () => setIsSidebarExpanded(!isSidebarExpanded);
   const toggleSidebarOpen = () => setIsSidebarOpen(!isSidebarOpen);
+
+  useEffect(() => {
+    setCookie("isSidebarExpanded", isSidebarExpanded.toString());
+  }, [isSidebarExpanded]);
 
   return (
     <SidebarContext.Provider

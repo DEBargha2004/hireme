@@ -1,10 +1,18 @@
 import Navbar from "@/components/custom/app/navbar";
 import Sidebar from "@/components/custom/app/sidebar/sidebar";
 import SidebarProvider from "@/providers/sidebar-provider";
+import { cookies } from "next/headers";
 
-export default function AppLayout({ children }: { children: React.ReactNode }) {
+export default async function AppLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const cookie = await cookies();
+  const isSidebarExpanded = cookie.get("isSidebarExpanded")?.value === "true";
+
   return (
-    <SidebarProvider>
+    <SidebarProvider defaultValues={{ isSidebarExpanded }}>
       <div className="flex items-start h-fit">
         <Sidebar className="hidden md:flex shrink-0 sticky top-0 h-[100dvh] shadow-lg" />
         <div className="w-full ">
