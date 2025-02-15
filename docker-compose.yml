@@ -1,0 +1,7 @@
+version: "3"
+name: "hireme-docker-compose"
+services:
+  web:
+    image: "hireme:latest"
+    ports:
+      - "3000:3000"
