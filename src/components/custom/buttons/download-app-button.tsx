@@ -1,4 +1,4 @@
-import { Button, ButtonProps } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 export default function DownloadAppButton({
   className,
   ...props
-}: ButtonProps) {
+}: React.ComponentProps<typeof Button>) {
   return (
     <Dialog>
       <DialogTrigger asChild>

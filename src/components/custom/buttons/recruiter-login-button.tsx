@@ -1,11 +1,11 @@
-import { Button, ButtonProps } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 
 export default function RecruiterLoginButton({
   className,
   ...props
-}: ButtonProps) {
+}: React.ComponentProps<typeof Button>) {
   return (
     <Link href={"/recruiter"}>
       <Button

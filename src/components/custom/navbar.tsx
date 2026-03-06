@@ -22,7 +22,7 @@ export default function Navbar() {
   const { isNavbarCompressed, toggleIsNavbarCompressed } = useGlobalAppStore();
   return (
     <>
-      <nav className="sticky z-[999] top-0 py-5 px-10 shadow bg-background">
+      <nav className="sticky z-999 top-0 py-5 px-10 shadow bg-background">
         <div className="w-full h-10 flex items-center justify-between">
           <AppLogo />
           <div className="w-full flex justify-end">
@@ -50,7 +50,7 @@ export default function Navbar() {
                     <AlignJustify className="h-5 w-5 scale-125" />
                   </Button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent align="end" className="z-[999]">
+                <DropdownMenuContent align="end" className="z-999">
                   {navLinks.slice(3).map((link) => (
                     <Link href={link.href} key={link.label}>
                       <DropdownMenuItem className="p-4">
@@ -73,8 +73,8 @@ export default function Navbar() {
       </nav>
       <div
         className={cn(
-          "fixed left-0 top-20 z-[999] w-full transition-all lg:hidden flex flex-col justify-center items-center gap-3 bg-muted overflow-hidden",
-          isNavbarCompressed ? "h-0" : "h-[400px]",
+          "fixed left-0 top-20 z-999 w-full transition-all lg:hidden flex flex-col justify-center items-center gap-3 bg-muted overflow-hidden",
+          isNavbarCompressed ? "h-0" : "h-100",
         )}
       >
         {navLinks.map((link) => (

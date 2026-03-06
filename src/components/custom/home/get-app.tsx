@@ -1,11 +1,14 @@
 import chatDirectly from "@/../public/chat-directly-new.png";
-import { Button, ButtonProps } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 
-function GetAppButtonLinked({ className, ...props }: ButtonProps) {
+function GetAppButtonLinked({
+  className,
+  ...props
+}: React.ComponentProps<typeof Button>) {
   return (
     <Link href={"https://cgmeetup.vercel.app"} className="block">
       <Button
