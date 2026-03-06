@@ -62,7 +62,7 @@ export default function Landing() {
   return (
     <section className="section space-y-12">
       <h1
-        className="md:text-6xl text-5xl font-bold "
+        className="md:text-6xl text-5xl font-bold"
         style={{ lineHeight: "1.3" }}
       >
         Direct <span className="text-primary">Hiring</span> App for Founders,
