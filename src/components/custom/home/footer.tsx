@@ -92,8 +92,8 @@ export default function Footer() {
           <section className="flex flex-col justify-start md:items-start md:text-left text-center items-center gap-10 md:col-span-2">
             <AppLogo className="h-12 w-fit" variant="light" width={300} />
             <p className="text-white  lg:max-w-[300px] max-w-[250px] lg:text-base text-sm">
-              Chat Directly. Hire Instantly. Trusted by 3.8M+ verified job
-              seekers and 190K+ verified recruiters.
+              Chat Directly. Hire Instantly. Trusted by 120,000+ startups and
+              10,000+ daily fresh job seekers.
             </p>
           </section>
           {footerLabel.map((item, index) => (

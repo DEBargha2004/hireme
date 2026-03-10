@@ -45,7 +45,8 @@ export default function ChatWithDecisionmakers() {
           <section className="flex flex-col md:col-start-2 row-start-1 justify-center md:items-start items-center md:text-left gap-6">
             <h1 className="text-4xl font-bold">Hire Directly with Hireme</h1>
             <p>
-              3.8M+ candidates chat directly with 190K+ recruiters on Hireme.
+              Join 120,000+ startups and 10,000+ daily fresh job seekers on
+              HireMe.
             </p>
             <Button
               className="rounded-full text-black font-semibold px-7 py-5"

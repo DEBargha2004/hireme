@@ -9,15 +9,15 @@ import MediaCoverage from "@/components/custom/home/media-coverage";
 
 export default function Page() {
   return (
-    <div className="lg:pt-32 md:pt-20 pt-8 space-y-10">
+    <div className="lg:pt-32 md:pt-20 pb-10 pt-8 space-y-10">
       <Landing />
       <GetAppSection />
       <TrendingJobs />
       <ChatWithDecisionmakers />
       <Cities />
-      <Recruiters />
+      {/* <Recruiters />
       <Testimonials />
-      <MediaCoverage />
+      <MediaCoverage /> */}
     </div>
   );
 }
