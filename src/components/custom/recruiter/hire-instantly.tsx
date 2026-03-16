@@ -26,7 +26,7 @@ export default function HireInstantly() {
   return (
     <div className="w-full py-10">
       <div className="section flex md:flex-row flex-col-reverse justify-between items-start gap-10">
-        <section className="flex flex-col justify-start md:items-start md:text-left text-center items-center gap-6 w-full">
+        <section className="flex flex-col justify-start text-center items-center gap-6 w-full">
           <h1 className="md:text-6xl text-5xl font-bold">
             Want to <span className="text-primary">Hire</span> Instantly?
           </h1>
@@ -40,10 +40,10 @@ export default function HireInstantly() {
             alt="Recruiter Hero"
             height={400}
             width={400}
-            className="w-4/5 "
+            className="w-4/5 max-w-md"
           />
         </section>
-        <section className="flex flex-col justify-between items-end w-full">
+        {/* <section className="flex flex-col justify-between items-end w-full">
           <Card className=" shadow-2xl lg:w-[85%] w-full h-fit">
             <CardHeader>
               <CardTitle className="text-2xl text-black/80 tracking-wide">
@@ -65,7 +65,7 @@ export default function HireInstantly() {
               Have Multiple Positions to Fill?
             </Link>
           </p>
-        </section>
+        </section> */}
       </div>
     </div>
   );

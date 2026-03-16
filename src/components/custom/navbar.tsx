@@ -41,7 +41,7 @@ export default function Navbar() {
               ))}
               <RecruiterLoginButton className="mx-2" />
               <DownloadAppButton className="mx-2" />
-              <DropdownMenu>
+              {/* <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button
                     className="mx-2 px-3 hover:bg-transparent"
@@ -59,7 +59,7 @@ export default function Navbar() {
                     </Link>
                   ))}
                 </DropdownMenuContent>
-              </DropdownMenu>
+              </DropdownMenu> */}
             </div>
             <Button
               className="lg:hidden px-3 border-primary"
